@@ -1,0 +1,76 @@
+{% load static %}
+<header class="main-header">
+    <div class="main-inner">
+        <!--logo-->
+        <a href="index.html" class="logo-holder"><img src="{% static 'images/logo-w.svg' %}" alt=""></a>
+        <!--logo end-->
+        <!-- sb-button-->
+        <div class="sb-button c_sb"><span></span></div>
+        <!-- sb-button end-->
+        <!-- mobile nav -->
+        <div class="nav-button-wrap">
+            <div class="nav-button"><span></span><span></span><span></span></div>
+        </div>
+        <!-- mobile nav end-->
+        <!-- share btn-->
+        <div class="share-btn isShare show-share"><span>اشتراک‌گذاری  <i class="fal fa-chevron-up"></i></span></div>
+        <!-- share btn end-->
+        <!--  navigation -->
+        <div class="nav-holder main-menu">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="{% url 'home:home' %}" class="act-link">خانه </a>
+                        <!--second level -->
+                        <ul>
+                            <li><a href="index.html">کاروسل</a></li>
+                            <li><a href="index2.html">اسلایدر </a></li>
+                            <li><a href="index3.html">شبکه تصاویر</a></li>
+                            <li><a href="index4.html">کاروسل ۲</a></li>
+                            <li><a href="index5.html">ویدیو</a></li>
+                        </ul>
+                        <!--second level end-->
+                    </li>
+                    <li>
+                        <a href="#">نمونه‌کار </a>
+                        <!--second level -->
+                        <ul>
+                            <li><a href="portfolio.html">شبکه افقی </a></li>
+                            <li><a href="portfolio2.html">شبکه عمودی</a></li>
+                            <li><a href="portfolio3.html">شبکه ستونی</a></li>
+                            <li>
+                                <a href="#">تکی </a>
+                                <!--سطح سوم -->
+                                <ul>
+                                    <li><a href="portfolio-single.html">سبک ۱</a></li>
+                                    <li><a href="portfolio-single2.html">سبک ۲</a></li>
+                                    <li><a href="portfolio-single3.html">سبک ۳</a></li>
+                                    <li><a href="portfolio-single4.html">سبک ۴</a></li>
+                                </ul>
+                                <!--third level end-->
+                            </li>
+                        </ul>
+                        <!--second level end-->
+                    </li>
+                    <li>
+                        <a href="{% url 'home:about' %}">درباره</a>
+                    </li>
+                    <li>
+                        <a href="blog.html">اخبار</a>
+                    </li>
+                    <li>
+                        <a href="contacts.html">تماس‌ها</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- navigation  end -->
+        <!-- share-wrapper-->
+        <div class="share-wrapper">
+            <div class="share-inner">
+                <div class="share-container"></div>
+            </div>
+        </div>
+        <!-- share-wrapper end -->
+    </div>
+</header>

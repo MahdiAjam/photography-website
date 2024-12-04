@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+<html lang="fa" dir="rtl">
+
+{% include 'inc/head.html' %}
+
+<body>
+
+<!--loader-->
+{% include 'inc/loader.html' %}
+<!--loader end-->
+
+<!--  main start  -->
+<div id="main">
+
+    <!--  header main-header  -->
+    {% include 'inc/header.html' %}
+    <!-- Header   end-->
+
+    {% block content %}{% endblock %}
+
+    <!-- aside-column -->
+    {% include 'inc/aside_column.html' %}
+    <!-- aside-column  end -->
+    <!-- footer -->
+    {% include 'inc/footer.html' %}
+    <!-- footer end-->
+
+    <!-- sidebar-->
+    {% include 'inc/sidebar.html' %}
+    <!-- sidebar end-->
+
+</div>
+<!-- Main end -->
+<!--=============== scripts  ===============-->
+<!-- build:js -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/plugins.js' %}"></script>
+<script src="{% static 'js/scripts.js' %}"></script>
+<!-- endbuild -->
+</body>
+</html>

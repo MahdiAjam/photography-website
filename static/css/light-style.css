@@ -1,0 +1,136 @@
+/*! light-style*/
+.ml-mask {
+    background-image: linear-gradient(to right, transparent, #fff 50%, #fff);
+}
+
+body, .ml_bg-item:before, .main-loader, .main-inner, .aside-column, .main-footer, .ccsw, .fs-slider-item_btn, .box-media-zoom, .grid-media-zoom, .sidebar-social li a:hover, .share-wrapper, .btn:hover, .single-post-container, .single_slider_btn, .comment-body, .details-wrap_center_container, .hero-slider-wrap_pagination-wrap2 .hero-slider-pag .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #fff
+}
+
+.sb-button span, .sb-button:before, .sb-button:after, .sb-button span:before, .hero-slider-pag .swiper-pagination-bullet.swiper-pagination-bullet-active, .scroller, .ccsw:hover, .fs-slider-item_btn:hover, .section-title h3:before, .custom-skillbar, .btn, .slide-progress, .progress-bar, .page-scroll-nav li a.act-sec:before, .page-scroll-nav li span, .hbn_vis strong, .pr-tags li a, .list a:hover i, .gallery-filters-wrap .gallery-filters a.gallery-filter-active:before, .testi-contorls .hero-slider-wrap_pagination-wrap2 .hero-slider-pag .swiper-pagination-bullet.swiper-pagination-bullet-active, .nav-button span, #message h3, #message p, .error_message {
+    background: #000;
+}
+
+.share-btn, .nav-holder nav li a, .header_social li a, .footer_contacts li a, .policy-box, .folio-counter, .fw-carousel_number_wrap, .ccsw, .fs-slider-item_btn, .box-media-zoom, .grid-media-zoom, .sb-widget-wrap h3, .categories_widget_title, .sidebar-social li a:hover, .share-wrapper a, .section-title h3, .inline-facts h6, .inline-facts .num, .serv-item h4 a, .serv-item ul li a, .custom-skillbar-title span, .skill-bar-percent, .testi-counter, .order-wrap h4, .btn:hover, .post-item_content h3 a, .post-header a, .post-header span, .post-link, .bth_btn, .pr-tags span, .single_slider_btn, .comment-author h6 a, .comment-author h5 a, .contact-details ul li a, .caption-wrap ul li a, .filter-btn_container:before, .gallery-filters-wrap .gallery-filters a, .filter-btn {
+    color: #000;
+}
+
+.ccsw:hover, .fs-slider-item_btn:hover, .btn, .page-scroll-nav li span, .hbn_vis strong, .pr-tags li a, .close_sb {
+    color: #fff;
+}
+
+.sb-widget p, .section-title h4, .section-number, .bth_btn:hover, .comm-num, .caption-wrap ul li span, #message p strong {
+    color: #999
+}
+
+.nav-holder:before, .header_social:before, .header_social:after, .hero-slider-pag .swiper-pagination-bullet, .folio-counter:before, .fw-carousel_number_wrap:before, .main-footer:before, .main-inner:before, .mousey:after, .skillbar-bg, .testi-contorls:before, .testi-counter:before, .slide-progress-wrap, .progress-bar-wrap, .list a i {
+    background: #ccc
+}
+
+.hero-slider-pag .swiper-pagination-bullet:after, .sb-widget-wrap, .section-title, .inline-facts-holder, .post_opt-wrap, .filt-line {
+    border-color: #ccc
+}
+
+.share-btn, .mousey {
+    border-color: #ccc
+}
+
+.sidebar-wrap, .sidebar-wrap:before, .sidebar-wrap:after, .hfs_wrap, section, .order-wrap, .clients-carousel-wrap, .comm-num, .lv_col, .horizontal-grid-wrap {
+    background: #f1f1f1;
+}
+
+.sb-overlay {
+    border-radius: 30px;
+}
+
+.fw-carousel2 {
+    top: 20px;
+    inset-inline-start: 20px;
+    inset-inline-end: 20px;
+    bottom: 20px;
+    height: auto;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.sidebar-wrap, .details-wrap_center-inner {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0);
+}
+
+.sb-overlay {
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+}
+
+.custom-form textarea, .custom-form input[type="text"], .custom-form input[type=email], .post-item_media a, .pagination a, .order_btn, .to-top-btn, .btn, .serv-item img, .serv-price, .sidebar-social li a, #subscribe .enteremail, #subscribe-button, .categories_widget_item_img, .blog-media, .pr-tags li a, .post-img-row img, .comment-author img, .map-box, .single-video_wrap, .close_sb {
+    box-shadow: 0 10px 44px 0px rgba(0, 0, 0, .3);
+}
+
+.comment-body, .blog-btn, .comm-num {
+    box-shadow: 0 10px 64px 0px rgba(0, 0, 0, .1);
+}
+
+.lv_col {
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.gallery-filters-overlay {
+    inset-inline-end: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.99) 90%);
+}
+
+[dir='rtl'] .gallery-filters-overlay {
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.99) 90%);
+}
+
+.horizontal-grid-wrap {
+    padding: 20px;
+}
+
+.thumbnail-container, .details_overlay, .lv_col {
+    border-radius: 30px;
+}
+
+@media only screen and (max-width: 1068px) {
+    .fixed-bottom-container, .hfs_wrap, .details-wrap_center-inner, .lv_col {
+        background: #fff;
+    }
+
+    .fw-carousel2 {
+        top: 0;
+        inset-inline-start: 0;
+        inset-inline-end: 0;
+        bottom: 0;
+        border-radius: 0;
+    }
+
+    .fw-carousel2 .swiper-slide .overlay {
+        width: auto;
+        height: auto;
+        inset-inline-start: 10px;
+        top: 10px;
+        bottom: 0;
+        inset-inline-end: 10px;
+    }
+
+    .fixed-bottom-container {
+        border-top: 1px solid #eee;
+    }
+
+    .gallery-filters-overlay {
+        inset-inline-end: 0;
+    }
+
+    .lv_col {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .inline-filters-wrap .gallery-filters {
+        box-shadow: 0 10px 44px 0px rgba(0, 0, 0, .3);
+    }
+}
