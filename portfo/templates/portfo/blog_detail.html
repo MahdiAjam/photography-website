@@ -1,0 +1,242 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Detail{% endblock %}
+
+{% block content %}
+    <!-- wrapper -->
+    <div id="wrapper">
+        <!-- content-holder -->
+        <div class="content-holder">
+            <!-- column-image  -->
+            <div class="column-image">
+                <div class="bg" data-bg="{% static 'images/bg/17.jpg' %}"></div>
+                <div class="overlay"></div>
+                <div class="column-title">
+                    <h2>آخرین اخبار ما</h2>
+                    <h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ. ماسیناس این پولوینار نیکوی. نولا
+                        فینیبوس لوبورتیس پولوینار.</h3>
+                </div>
+                <div class="ci_dec"><span></span></div>
+            </div>
+            <!-- column-image end  -->
+            <!-- column-wrapper -->
+            <div class="column-wrapper">
+                <!-- section -->
+                <section>
+                    <div class="container small-container">
+                        <div class="blog-opt">
+                            <div class="blog-search-wrap custom-form">
+                                <input name="se" id="se" type="text" class="search" placeholder="جستجو..." value="">
+                                <button><i class="far fa-search"></i></button>
+                            </div>
+                            <!-- filter category    -->
+                            <div class="category-filter blog-btn-filter">
+                                <div class="blog-btn">Categories / برچسبs</div>
+                                <div class="blog-filter-wrap">
+                                    <div class="blog-filter-wrap_item" data-bfgt="Categories">
+                                        <ul>
+                                            <li><a href="#">طراحی داخلی</a></li>
+                                            <li><a href="#">طبیعت</a></li>
+                                            <li><a href="#">تجاری</a></li>
+                                            <li><a href="#">سفر</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="blog-filter-wrap_item" data-bfgt="برچسبs">
+                                        <ul>
+                                            <li><a href="#">وبلاگ</a></li>
+                                            <li><a href="#">عکاسی</a></li>
+                                            <li><a href="#">نمونه‌کار</a></li>
+                                            <li><a href="#">برچسب</a></li>
+                                            <li><a href="#">ویدیو</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="blog-filter-wrap_title"></div>
+                                </div>
+                            </div>
+                            <!-- filter category end  -->
+                        </div>
+                        <div class="section-title  n_dec">
+                            <h3>سفر به کوه‌های برفی</h3>
+                            <h4>اما زمان، توده‌ای از خاردارها و تسهیلات را فراهم می‌آورد. در تخمیر، تسهیل‌های
+                                توده‌ای</h4>
+                        </div>
+                        <!-- blog media -->
+                        <div class="blog-media">
+                            <div class="single-slider-wrap">
+                                <div class="single-slider">
+                                    <div class="swiper-container">
+                                        <div class="swiper-wrapper lightgallery">
+                                            <div class="swiper-slide hov_zoom"><img
+                                                    src="{% static 'images/folio/10.jpg' %}" alt=""><a
+                                                    href="{% static 'images/folio/10.jpg' %}"
+                                                    class="box-media-zoom   popup-image"><i
+                                                    class="fal fa-search"></i></a></div>
+                                            <div class="swiper-slide hov_zoom"><img
+                                                    src="{% static 'images/folio/6.jpg' %}" alt=""><a
+                                                    href="{% static 'images/folio/6.jpg' %}"
+                                                    class="box-media-zoom   popup-image"><i
+                                                    class="fal fa-search"></i></a></div>
+                                            <div class="swiper-slide hov_zoom"><img
+                                                    src="{% static 'images/folio/7.jpg' %}" alt=""><a
+                                                    href="{% static 'images/folio/7.jpg' %}"
+                                                    class="box-media-zoom   popup-image"><i
+                                                    class="fal fa-search"></i></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single_slider_btn hsc-next"><i class="fal fa-angle-right"></i></div>
+                                <div class="single_slider_btn hsc-prev"><i class="fal fa-angle-left"></i></div>
+                            </div>
+                            <div class="ss-slider-pagination_wrap">
+                                <div class="ss-slider-pagination"></div>
+                            </div>
+                        </div>
+                        <!-- blog media end -->
+                        <!-- single-post-container-->
+                        <div class="single-post-container">
+                            <p>وسیبولوم لاکینیا می نون لاکوس تینچیدونت آکومسان. نونک ونناتیس ارت اک اینیم فسیلیسیس
+                                پولونار. دونک پلاسرت ات ولیت نک بیبندوم.
+                            </p>
+                            <p>لورم ایپسوم دولور سیت آمت، کانسکتتور آدیپیسکینگ الیت. پروین اورناره سم سد کوا مپس آلکویت
+                                ویتائه اگت دولور. پروین او اولتریس لیبرو. آلیکام ارات ولپات. آنیان سمپر دوی آیید آکومسان
+                                پلوینار. آلیکام کانگه مّولیس تورپی، آ ولپات متوس لوبرتس نک. اینتگر این مّولیس کوا. کریس
+                                نیسل می، دابیوس آ آنته نان، آکومسان لوکتوس آوگه.
+                            </p>
+                            <div class="post-img-row">
+                                <div class="post-img-row_item">
+                                    <img src="{% static 'images/folio/11.jpg' %}" class="respimg" alt="">
+                                </div>
+                                <div class="post-img-row_item">
+                                    <img src="{% static 'images/folio/12.jpg' %}" class="respimg" alt="">
+                                </div>
+                            </div>
+                            <p>لورم ایپسوم دولور سیت آمت، کانسکتتور آدیپیسکینگ الیت. پروین اورناره سم سد کوا مپس آلکویت
+                                ویتائه اگت دولور. پروین او اولتریس لیبرو. آلیکام ارات ولپات. آنیان سمپر دوی آیید آکومسان
+                                پلوینار. آلیکام کانگه مّولیس تورپی، آ ولپات متوس لوبرتس نک. اینتگر این مّولیس کوا. کریس
+                                نیسل می، دابیوس آ آنته نان، آکومسان لوکتوس آوگه.
+                            </p>
+                            <p>لورم ایپسوم دولور سیت آمت، کانسکتتور آدیپیسکینگ الیت. پروین اورناره سم سد کوا مپس آلکویت
+                                ویتائه اگت دولور. پروین او اولتریس لیبرو. آلیکام ارات ولپات. آنیان سمپر دوی آیید آکومسان
+                                پلوینار. آلیکام کانگه مّولیس تورپی، آ ولپات متوس لوبرتس نک. اینتگر این مّولیس کوا. کریس
+                                نیسل می، دابیوس آ آنته نان، آکومسان لوکتوس آوگه.
+                            </p>
+                            <blockquote>
+                                <p> کریس لاسی‌نیا ماگنا ول مولستیه فاوکسبوس. دانک آکتور ات اورنا. لورم ایپسوم دولور سیت
+                                    آمت، کانسکتتور آدیپیسکینگ الیت. کریس لاسی‌نیا ماگنا ول مولستیه فاوکسبوس. کریس
+                                    لاسی‌نیا ماگنا ول مولستیه فاوکسبوس. دانک آکتور ات اورنا. لورم ایپسوم دولور سیت آمت،
+                                    کانسکتتور آدیپیسکینگ الیت. کریس لاسی‌نیا ماگنا ول مولستیه فاوکسبوس. کریس لاسی‌نیا
+                                    ماگنا ول مولستیه فاوکسبوس. </p>
+                            </blockquote>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ. سِد نک نیسی ات نیب سولیسیتودین
+                                پِلیکولا ویتای سیت امت تورتر. وستیبولوم لاسینیا می نون لاکوس تینسیدونت آکومسان. نونک
+                                وِنِناتیس ارات اک انیم فاسیلیسیس پولوینار. دونک پلاسیرات ات وِلیت نک بیبندوم. وستیبولوم
+                                انت پرایمیس این فاوکیبوس اورسی لوکتوس ات اولتریکس پوزویری کوبیلیا کورائی؛ کلاس اپتنت
+                                تاکیتی سوسیوسک آد لیتورا تورکنت پر کونوبیا نوسترا، پر اینسپتوس هیمنائوس. دونک لوکتوس،
+                                آوگه ویتای بلندیت لوبورتیس، آوگه اورنا واریوس تلوس، ات ویورا اوڈیو ایپسوم اید وِلیت.
+                                موربی پلِکولنته اسکلریکوئس دیگنیسیم. این دیگنیسیم لوکتوس آوگه. فازلس ویورا نیب ول ساپیین
+                                فاسیلیسیس، اید پلاسیرات نونک کونگوی. علیکوام ارات وولپات. آئنان سمپر دوی اید آکومسان
+                                پولوینار. علیکوام کونگه مولیس تورپیس، آ وولپات متوس لوبورتیس نک. اینتگر این مولیس کوام.
+                                کراس نیسل می، دپیبوس آ آنت نون، آکومسان لوکتوس آوگه.</p>
+                            <div class="post_opt-wrap">
+                                <div class="pr-tags">
+                                    <span>برچسب‌ها: </span>
+                                    <ul>
+                                        <li><a href="#">طراحی</a></li>
+                                        <li><a href="#">عکاسی</a></li>
+                                        <li><a href="#">مد</a></li>
+                                        <li><a href="#">سفر</a></li>
+                                    </ul>
+                                </div>
+                                <div class="post-opt_single gray-bg">
+                                    <span><i class="fal fa-eye"></i> ۲۱۴ بازدید</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-post-container end-->
+                    </div>
+                </section>
+                <!-- section end -->
+                <!-- section -->
+                <section>
+                    <div class="container small-container">
+                        <div class="section-title n_dec st_small">
+                            <h3>نظرات</h3>
+                        </div>
+                        <div class="commnets-list">
+                            <!-- comment-item -->
+                            <div class="comment-item">
+                                <div class="comment-author">
+                                    <img alt="" src="{% static 'images/avatar/2.jpg' %}" width="50" height="50">
+                                    <h5><a href="#">کوین</a></h5>
+                                    <h6><a href="#">۱۲ دی ۱۴۰۰ </a></h6>
+                                </div>
+                                <div class="comment-body gray-bg">
+                                    <p>"لورم ایپسوم دولور سیت آمت، کانسکتتور آدیپیسکینگ الیت. فاسلوس هندریت. پِلنتسکوئه
+                                        آلکویت نیب نِک اورنا. این نیسی نِک، آلکویت ول، دابیوس آید، ماتیس ول، نیسی. سد
+                                        پریتیوم، لیگولا سولیسیتودین لوریت وویرا، تورتور لیبرو سودالس لئو، اگت بلاندیت
+                                        نانک تورتور او نیب. نولام مّولیس. اوت جوستو." </p>
+                                    <div class="comm-num">01.</div>
+                                </div>
+                            </div>
+                            <!--comment-item end -->
+                            <!-- comment-item -->
+                            <div class="comment-item">
+                                <div class="comment-author">
+                                    <img alt="" src="{% static 'images/avatar/3.jpg' %}" width="50" height="50">
+                                    <h5><a href="#">الکسا</a></h5>
+                                    <h6><a href="#">۲۳ دی ۱۳۹۹ </a></h6>
+                                </div>
+                                <div class="comment-body gray-bg">
+                                    <p>"لورم ایپسوم دولور سیت آمت، کانسکتتور آدیپیسکینگ الیت. فاسلوس هندریت. پِلنتسکوئه
+                                        آلکویت نیب نِک اورنا. این نیسی نِک، آلکویت ول، دابیوس آید، ماتیس ول، نیسی. سد
+                                        پریتیوم، لیگولا سولیسیتودین لوریت وویرا، تورتور لیبرو سودالس لئو، اگت بلاندیت
+                                        نانک تورتور او نیب. نولام مّولیس. اوت جوستو." </p>
+                                    <div class="comm-num">02.</div>
+                                </div>
+                            </div>
+                            <!--comment-item end -->
+                        </div>
+                        <div class="comment-form">
+                            <div class="section-title n_dec st_small">
+                                <h3>افزودن نظر</h3>
+                            </div>
+                            <form class="custom-form" name="commentform" id="commentform">
+                                <fieldset>
+                                    <input type="text" name="name" id="name" placeholder="نام شما *" value="">
+                                    <input type="text" name="email" id="email" placeholder="آدرس ایمیل *" value="">
+                                    <textarea name="comments" id="comments" cols="40" rows="3"
+                                              placeholder="پیام شما:"></textarea>
+                                    <button class="btn" id="submit">ارسال نظر</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <!-- section end -->
+                <div class="order-wrap">
+                    <div class="container small-container">
+                        <h4>آیا آماده سفارش پروژه خود هستید؟</h4>
+                    </div>
+                    <a href="{% url 'home:about' %}" class="order_btn">تماس بگیرید</a>
+                </div>
+            </div>
+            <!-- column-wrapper -->
+            <!-- fixed-bottom-container -->
+            <div class="fixed-bottom-container">
+                <div class="scroll-down-wrap">
+                    <div class="mousey">
+                        <div class="scroller"></div>
+                    </div>
+                </div>
+                <a href="index.html" class="bth_btn hbn_vis"><i class="fal fa-home-lg-alt"></i><strong>بازگشت به
+                    خانه</strong></a>
+                <div class="progress-bar-wrap">
+                    <div class="progress-bar color-bg"></div>
+                </div>
+            </div>
+            <!-- fixed-bottom-container end-->
+        </div>
+        <!-- content-holder end -->
+    </div>
+    <!-- wrapper end -->
+{% endblock %}

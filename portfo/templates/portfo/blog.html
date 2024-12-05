@@ -1,0 +1,217 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+    <!-- wrapper -->
+    <div id="wrapper">
+        <!-- content-holder -->
+        <div class="content-holder">
+            <!-- column-image  -->
+            <div class="column-image">
+                <div class="bg" data-bg="{% static 'images/bg/4.jpg' %}"></div>
+                <div class="overlay"></div>
+                <div class="column-title">
+                    <h2>آخرین اخبار ما</h2>
+                    <h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ. ماسیناس این پولوینار نیکوی. نولا
+                        فینیبوس لوبورتیس پولوینار.</h3>
+                </div>
+                <div class="ci_dec"><span></span></div>
+            </div>
+            <!-- column-image end  -->
+            <!-- column-wrapper -->
+            <div class="column-wrapper">
+                <!--section  -->
+                <section id="sec1">
+                    <div class="container small-container">
+                        <div class="blog-opt">
+                            <div class="blog-search-wrap custom-form">
+                                <input name="se" id="se" type="text" class="search" placeholder="جستجو..." value="">
+                                <button><i class="far fa-search"></i></button>
+                            </div>
+                            <!-- filter category    -->
+                            <div class="category-filter blog-btn-filter">
+                                <div class="blog-btn">دسته‌ها - برچسب‌ها</div>
+                                <div class="blog-filter-wrap">
+                                    <div class="blog-filter-wrap_item" data-bfgt="Categories">
+                                        <ul>
+                                            <li><a href="#">طراحی داخلی</a></li>
+                                            <li><a href="#">طبیعت</a></li>
+                                            <li><a href="#">تجاری</a></li>
+                                            <li><a href="#">سفر</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="blog-filter-wrap_item" data-bfgt="برچسبs">
+                                        <ul>
+                                            <li><a href="#">وبلاگ</a></li>
+                                            <li><a href="#">عکاسی</a></li>
+                                            <li><a href="#">نمونه‌کار</a></li>
+                                            <li><a href="#">برچسب</a></li>
+                                            <li><a href="#">ویدیو</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="blog-filter-wrap_title"></div>
+                                </div>
+                            </div>
+                            <!-- filter category end  -->
+                        </div>
+                        <div class="post-items">
+                            <!-- post-item-->
+                            <div class="post-item">
+                                <div class="post-item_wrap">
+                                    <div class="post-item_media">
+                                        <a href="blog-single.html">
+                                            <img src="{% static 'images/folio/6.jpg' %}" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="post-item_content">
+                                        <div class="post-header"><a href="#">۴ خرداد ۱۴۰۱</a> <a href="#">طبیعت</a> <a
+                                                href="#">سفر</a></div>
+                                        <h3><a href="blog-single.html">سفر به طبیعت چوبی</a></h3>
+                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ. هیچ‌گونه پایان
+                                            لاپیس پلونر وجود ندارد. هیچ فینبوس لوبورتیس پلونر. دونک یک ساختگی</p>
+                                        <a href="blog-single.html" class="single-btn"><span>بیشتر بخوانید</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- post-item end-->
+                            <!-- post-item-->
+                            <div class="post-item">
+                                <div class="post-item_wrap">
+                                    <div class="post-item_media">
+                                        <a href="blog-single.html">
+                                            <img src="{% static 'images/folio/7.jpg' %}" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="post-item_content">
+                                        <div class="post-header"><a href="#">1 اردیبهشت 1401</a> <a href="#">بیرون از
+                                            خانه</a>
+                                            <a href="#">سفر</a></div>
+                                        <h3><a href="blog-single.html">حیوانات بامزه</a></h3>
+                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ. هیچ‌گونه پایان
+                                            لاپیس پلونر وجود ندارد. هیچ فینبوس لوبورتیس پلونر. دونک یک ساختگی</p>
+                                        <a href="blog-single.html" class="single-btn"><span>بیشتر بخوانید</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- post-item end-->
+                            <!-- post-item-->
+                            <div class="post-item">
+                                <div class="post-item_wrap">
+                                    <div class="post-item_media">
+                                        <a href="blog-single.html">
+                                            <img src="{% static 'images/folio/14.jpg' %}" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="post-item_content">
+                                        <div class="post-header"><a href="#">۲۴ اسفند ۱۴۰۰</a> <a href="#">بیرون از
+                                            خانه</a>
+                                            <a href="#">سفر</a></div>
+                                        <h3><a href="blog-single.html">ارتباط با گمشده‌ها</a></h3>
+                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ. هیچ‌گونه پایان
+                                            لاپیس پلونر وجود ندارد. هیچ فینبوس لوبورتیس پلونر. دونک یک ساختگی</p>
+                                        <a href="blog-single.html" class="single-btn"><span>بیشتر بخوانید</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- post-item end-->
+                            <!-- post-item-->
+                            <div class="post-item">
+                                <div class="post-item_wrap">
+                                    <div class="post-item_media">
+                                        <a href="blog-single.html">
+                                            <img src="{% static 'images/folio/16.jpg' %}" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="post-item_content">
+                                        <div class="post-header"><a href="#">۱۹ اسفند ۱۴۰۰</a> <a href="#">مدل‌ها</a> <a
+                                                href="#">سفر</a></div>
+                                        <h3><a href="blog-single.html">زیبایی در آرامش</a></h3>
+                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ. هیچ‌گونه پایان
+                                            لاپیس پلونر وجود ندارد. هیچ فینبوس لوبورتیس پلونر. دونک یک ساختگی</p>
+                                        <a href="blog-single.html" class="single-btn"><span>بیشتر بخوانید</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- post-item end-->
+                            <!-- post-item-->
+                            <div class="post-item">
+                                <div class="post-item_wrap">
+                                    <div class="post-item_media">
+                                        <a href="blog-single.html">
+                                            <img src="{% static 'images/folio/17.jpg' %}" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="post-item_content">
+                                        <div class="post-header"><a href="#">12 اسفند 1400</a> <a href="#">بیرون از
+                                            خانه</a>
+                                            <a href="#">طبیعت</a></div>
+                                        <h3><a href="blog-single.html">سفر به طبیعت چوبی</a></h3>
+                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ. هیچ‌گونه پایان
+                                            لاپیس پلونر وجود ندارد. هیچ فینبوس لوبورتیس پلونر. دونک یک ساختگی</p>
+                                        <a href="blog-single.html" class="single-btn"><span>بیشتر بخوانید</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- post-item end-->
+                            <!-- post-item-->
+                            <div class="post-item">
+                                <div class="post-item_wrap">
+                                    <div class="post-item_media">
+                                        <a href="blog-single.html">
+                                            <img src="{% static 'images/folio/18.jpg' %}" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="post-item_content">
+                                        <div class="post-header"><a href="#">۱۰ اسفند ۱۴۰۰</a> <a href="#">مدل‌ها</a> <a
+                                                href="#">سفر</a></div>
+                                        <h3><a href="blog-single.html">سفر به کوه‌های برفی</a></h3>
+                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ. هیچ‌گونه پایان
+                                            لاپیس پلونر وجود ندارد. هیچ فینبوس لوبورتیس پلونر. دونک یک ساختگی</p>
+                                        <a href="blog-single.html" class="single-btn"><span>بیشتر بخوانید</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- post-item end-->
+                        </div>
+                        <!--pagination-->
+                        <div class="pagination">
+                            <div class="pr-bg pr-bg-white"></div>
+                            <a href="#" class="prevposts-link"><i class="fal fa-long-arrow-left"></i></a>
+                            <a href="#">01</a>
+                            <a href="#" class="current-page">02</a>
+                            <a href="#">03</a>
+                            <a href="#">04</a>
+                            <a href="#" class="nextposts-link"><i class="fal fa-long-arrow-right"></i></a>
+                        </div>
+                        <!--pagination end-->
+                    </div>
+                </section>
+                <!--section end  -->
+                <div class="order-wrap">
+                    <div class="container small-container">
+                        <h4>آیا آماده سفارش پروژه خود هستید؟</h4>
+                    </div>
+                    <a href="{% url 'home:contact' %}" class="order_btn">تماس بگیرید</a>
+                </div>
+            </div>
+            <!-- column-wrapper -->
+            <!-- fixed-bottom-container -->
+            <div class="fixed-bottom-container">
+                <div class="scroll-down-wrap">
+                    <div class="mousey">
+                        <div class="scroller"></div>
+                    </div>
+                </div>
+                <a href="index.html" class="bth_btn hbn_vis"><i class="fal fa-home-lg-alt"></i><strong>بازگشت به
+                    خانه</strong></a>
+                <div class="progress-bar-wrap">
+                    <div class="progress-bar color-bg"></div>
+                </div>
+            </div>
+            <!-- fixed-bottom-container end-->
+        </div>
+        <!-- content-holder end -->
+    </div>
+    <!-- wrapper end -->
+{% endblock %}

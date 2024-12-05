@@ -32,7 +32,7 @@
                         <!--second level end-->
                     </li>
                     <li>
-                        <a href="#">نمونه‌کار </a>
+                        <a href="{% url 'portfo:portfolio' %}">نمونه‌کار </a>
                         <!--second level -->
                         <ul>
                             <li><a href="portfolio.html">شبکه افقی </a></li>
@@ -56,10 +56,10 @@
                         <a href="{% url 'home:about' %}">درباره</a>
                     </li>
                     <li>
-                        <a href="blog.html">اخبار</a>
+                        <a href="{% url 'portfo:blog' %}">اخبار</a>
                     </li>
                     <li>
-                        <a href="contacts.html">تماس‌ها</a>
+                        <a href="{% url 'home:contact' %}">تماس‌ها</a>
                     </li>
                 </ul>
             </nav>
