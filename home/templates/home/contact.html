@@ -13,8 +13,8 @@
                 <div class="overlay"></div>
                 <div class="column-title">
                     <h2>اطلاعات تماس ما</h2>
-                    <h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ. ماسیناس این پولوینار نیکوی. نولا
-                        فینیبوس لوبورتیس پولوینار.</h3>
+                    <h3>در این صفحه شما می توانید اطلاعات تماس ما را ببینید.</h3>
+                    <h3>و هر لحضه با ما در ارتباط باشید.</h3>
                 </div>
                 <div class="ci_dec"><span></span></div>
             </div>
@@ -25,30 +25,24 @@
                 <section id="sec1">
                     <div class="container small-container">
                         <div class="section-title fl-wrap">
-                            <h3>جزئیات تماس</h3>
-                            <h4>اما زمان، توده‌ای از خاردارها و تسهیلات را فراهم می‌آورد. در تخمیر، تسهیل‌های
-                                توده‌ای</h4>
+                            <h3>{{ contact.title }}</h3>
+                            <h4>{{ contact.short_description }}</h4>
                             <div class="section-number">01.</div>
                         </div>
                         <div class="column-wrapper_item fl-wrap">
                             <div class="column-wrapper_text fl-wrap">
-                                <p>کریس ماتیس جودیشیوم پوروس سی آمت فرمنتوم آت نوس هینک پست‌هاک، سی‌تی‌ینتیس پیروس
-                                    آفروس. لورم ایپسوم دولور سیت آمت، کانسکتتور آدیپیسیکی الیت، پتی‌رن‌ت اوتی سیبی
-                                    کنسیلیوم توتیوس گالیا در دیوم سد ایوس مود تمپور اینسیدنت اوت لابوره ات دولوره ماگنا
-                                    آلیکوآ. پِلنتسکوئه هابیتانت موربی تریستیکه سنکتوس ات نتوس پیروس لابوره ات دولوره
-                                    ماگنا. لورم ایپسوم دولور سیت آمت، کانسکتتور آدیپیسکینگ الیت. مائسناس این پولوینار
-                                    نِک. نولا فینیبوس لوبرتس پولوینار. دانک آ کانسکتتور نولا. نولا پوسوئره ساپیئن ویتائه
-                                    لکتوس سوپ‌سیت، ات پولوینار نیسی تینسیدنت. آلیکام ارات ولپات. کوریبیتر کنوالیس
-                                    فریجیللا دیام سد آلیکام. سد تمپور یاکولیس ماسا فاوکسبوس فاسیلسیس. این فرمنتوم
-                                    فاسیلسیس ماسا، آ کونکوات پوروس وویرا.
-                                </p>
+                                <p>{{ contact.description }}</p>
                                 <div class="contact-details fl-wrap">
                                     <ul>
-                                        <li><span>ایمیل:</span><a href="#" target="_blank">yourmail@eltheme.ir</a></li>
-                                        <li><span>آدرس:</span><a href="#" target="_blank">آمریکا، بروکلین، نیویورک،
-                                            27</a>
+                                        <li><span>ایمیل:</span><a href="https://{{ contact.email }}"
+                                                                  target="_blank">{{ contact.email }}</a>
                                         </li>
-                                        <li><span>تلفن:</span><a href="#">+7(111)123456789</a> , <a href="#">+8(222)987654321</a>
+                                        <li><span>آدرس:</span><a href="#" target="_blank">{{ contact.location }}</a>
+                                        </li>
+                                        <li><span>تلفن:</span>
+                                            {% for phone in contact.phone.all %}
+                                                <a href="tel:{{ phone.phone }}"></a>{{ phone.phone }}<a href="tel:{{ phone.phone }}">{{ phone.phone }}</a>
+                                            {% endfor %}
                                         </li>
                                     </ul>
                                 </div>
