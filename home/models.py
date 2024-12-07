@@ -12,7 +12,11 @@ class ContactDetail(models.Model):
     description = models.TextField()
     email = models.EmailField()
     location = models.CharField(max_length=255)
+<<<<<<< HEAD
     phone = models.ManyToManyField(PhoneNumber)
+=======
+    phone = models.ManyToManyField(PhoneNumber, related_name='contact_detail')
+>>>>>>> 8770e349b65ad340c7f3513d2b97f21b5782f2cf
 
     def __str__(self):
         return f'{self.email} - {self.phone}'
