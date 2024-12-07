@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views import View
-
+from .models import ContactDetail, PhoneNumber
 
 class HomeView(View):
     def get(self, request):
@@ -13,6 +13,9 @@ class AboutView(View):
 
 
 class ContactView(View):
+    template_name = 'home/contact.html'
+
     def get(self, request):
-        return render(request, 'home/contact.html')
+        contact_detail = get_object_or_404(ContactDetail)
+        return render(request, self.template_name, {'contact': contact_detail})
 
