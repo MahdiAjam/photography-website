@@ -18,4 +18,3 @@ class ContactView(View):
     def get(self, request):
         contact_detail = get_object_or_404(ContactDetail)
         return render(request, self.template_name, {'contact': contact_detail})
-

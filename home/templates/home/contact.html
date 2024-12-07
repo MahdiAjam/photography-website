@@ -34,7 +34,6 @@
                                 <p>{{ contact.description }}</p>
                                 <div class="contact-details fl-wrap">
                                     <ul>
-<<<<<<< HEAD
                                         <li><span>ایمیل:</span><a href="https://{{ contact.email }}"
                                                                   target="_blank">{{ contact.email }}</a>
                                         </li>
@@ -42,16 +41,9 @@
                                         </li>
                                         <li><span>تلفن:</span>
                                             {% for phone in contact.phone.all %}
-                                                <a href="tel:{{ phone.phone }}"></a>{{ phone.phone }}<a href="tel:{{ phone.phone }}">{{ phone.phone }}</a>
+                                                <a href="tel:{{ phone.phone }}"></a>{{ phone.phone }}
+                                                <a href="tel:{{ phone.phone }}">{{ phone.phone }}</a>
                                             {% endfor %}
-=======
-                                        <li><span>ایمیل:</span><a href="#" target="_blank">{{ contact.email }}</a>
-                                        </li>
-                                        <li><span>آدرس:</span><a href="#" target="_blank">{{ contact.location }}</a>
-                                        </li>
-                                        <li><span>تلفن:</span><a href="#">+7(111)123456789</a> , <a
-                                                href="#">{{ contact.phone }}</a>
->>>>>>> 8770e349b65ad340c7f3513d2b97f21b5782f2cf
                                         </li>
                                     </ul>
                                 </div>
