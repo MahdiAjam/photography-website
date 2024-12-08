@@ -164,45 +164,22 @@
                     <div class="container small-container">
                         <div class="section-title fl-wrap">
                             <h3>مهارت‌ها و دستاوردها</h3>
-                            <h4>اما زمان، توده‌ای از خاردارها و تسهیلات را فراهم می‌آورد. در تخمیر، تسهیل‌های
-                                توده‌ای</h4>
+                            <h4>در اینجا مهارت ها و دستاورد های ما قرار دارد.</h4>
                             <div class="section-number">03.</div>
                         </div>
                         <div class="column-wrapper_item fl-wrap">
                             <div class="column-wrapper_text fl-wrap">
                                 <div class="skillbar-box animaper">
                                     <!-- skill 1-->
-                                    <div class="skillbar_item">
-                                        <div class="custom-skillbar-title"><span>فتوشاپ</span></div>
-                                        <div class="skill-bar-percent">95%</div>
-                                        <div class="skillbar-bg" data-percent="95%">
-                                            <div class="custom-skillbar"></div>
+                                    {% for skill in skill %}
+                                        <div class="skillbar_item">
+                                            <div class="custom-skillbar-title"><span>{{ skill.skill }}</span></div>
+                                            <div class="skill-bar-percent">{{ skill.proficiency }}</div>
+                                            <div class="skillbar-bg" data-percent="{{ skill.proficiency }}%">
+                                                <div class="custom-skillbar"></div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <!-- skill 2-->
-                                    <div class="skillbar_item">
-                                        <div class="custom-skillbar-title"><span>ایلوستریتور</span></div>
-                                        <div class="skill-bar-percent">65%</div>
-                                        <div class="skillbar-bg" data-percent="65%">
-                                            <div class="custom-skillbar"></div>
-                                        </div>
-                                    </div>
-                                    <!-- skill 3-->
-                                    <div class="skillbar_item">
-                                        <div class="custom-skillbar-title"><span>۳دی مکس</span></div>
-                                        <div class="skill-bar-percent">75%</div>
-                                        <div class="skillbar-bg" data-percent="75%">
-                                            <div class="custom-skillbar"></div>
-                                        </div>
-                                    </div>
-                                    <!-- مهارت ۴-->
-                                    <div class="skillbar_item">
-                                        <div class="custom-skillbar-title"><span>گوگل اسکچ‌آپ</span></div>
-                                        <div class="skill-bar-percent">90%</div>
-                                        <div class="skillbar-bg" data-percent="90%">
-                                            <div class="custom-skillbar"></div>
-                                        </div>
-                                    </div>
+                                    {% endfor %}
                                 </div>
                             </div>
                         </div>

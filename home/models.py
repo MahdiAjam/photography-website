@@ -6,6 +6,8 @@ class PhoneNumber(models.Model):
 
     def __str__(self):
         return self.phone
+
+
 class ContactDetail(models.Model):
     title = models.CharField(max_length=100)
     short_description = models.CharField(max_length=255)
@@ -17,6 +19,7 @@ class ContactDetail(models.Model):
     def __str__(self):
         return f'{self.email} - {self.phone}'
 
+
 class ContactUs(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
@@ -25,3 +28,10 @@ class ContactUs(models.Model):
     def __str__(self):
         return f'{self.email} - {self.text}'
 
+
+class Skill(models.Model):
+    skill = models.CharField(max_length=100)
+    proficiency = models.IntegerField(help_text="Proficiency out of 100")
+
+    def __str__(self):
+        return f'{self.skill} - {self.proficiency}'
