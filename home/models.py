@@ -18,12 +18,10 @@ class ContactDetail(models.Model):
         return f'{self.email} - {self.phone}'
 
 class ContactUs(models.Model):
-    title = models.CharField(max_length=100)
-    short_description = models.CharField(max_length=255)
-    description = models.TextField()
     name = models.CharField(max_length=100)
     email = models.EmailField()
     text = models.TextField()
 
     def __str__(self):
         return f'{self.email} - {self.text}'
+

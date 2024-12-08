@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views import View
-from .models import ContactDetail, PhoneNumber
+from .models import ContactDetail, PhoneNumber, ContactUs
+from .forms import ContactUsForm
 
 class HomeView(View):
     def get(self, request):
@@ -13,8 +14,16 @@ class AboutView(View):
 
 
 class ContactView(View):
+    form_class = ContactUsForm
     template_name = 'home/contact.html'
-
     def get(self, request):
         contact_detail = get_object_or_404(ContactDetail)
-        return render(request, self.template_name, {'contact': contact_detail})
+        form = self.form_class
+        return render(request, self.template_name, {'contact': contact_detail, 'form': form})
+
+    def post(self, request):
+        form = self.form_class(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home:contact')
+        return render(request, 'home/contact.html', {'form': form})

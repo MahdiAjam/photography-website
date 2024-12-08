@@ -84,25 +84,18 @@
                     <div class="container small-container">
                         <div class="section-title fl-wrap">
                             <h3>تماس بگیرید</h3>
-                            <h4>اما زمان، توده‌ای از خاردارها و تسهیلات را فراهم می‌آورد. در تخمیر، تسهیل‌های
-                                توده‌ای</h4>
+                            <h4>اینجا می توانید پیام های تان را برای ما بفرستید</h4>
                             <div class="section-number">03.</div>
                         </div>
                         <div class="column-wrapper_item fl-wrap">
                             <div class="column-wrapper_text fl-wrap">
-                                <p> لورم ایپسوم دولور سیت آمت، کانسکتتور آدیپیسکینگ الیت. موربی واریوس لاسی‌نیا
-                                    وس‌توبولوم. آلیکام لوبرتس فاسیلسیس تِلّوس، این فاسیلسیس اکس وِهیکولا آک. این
-                                    مِلاساودا کیس تورپی ول وویرا.</p>
+                                <p>هر نظر انتقاد یا پیشنهادی که دارید و یا هر ایده ای اینجا می توانید با ما به اشتراک بگذارید. </p>
                                 <div id="contact-form" class="fl-wrap">
                                     <div id="message"></div>
-                                    <form class="custom-form" action="#" name="contactform"
-                                          id="contactform">
+                                    <form class="custom-form" method="post" action="">
+                                        {% csrf_token %}
                                         <fieldset>
-                                            <input type="text" name="name" id="name" placeholder="نام شما *" value="">
-                                            <input type="text" name="email" id="email" placeholder="آدرس ایمیل *"
-                                                   value="">
-                                            <textarea name="comments" id="comments" cols="40" rows="3"
-                                                      placeholder="پیام شما:"></textarea>
+                                            {{ form.as_p }}
                                             <button class="btn float-btn flat-btn color-bg" id="submit">ارسال پیام
                                             </button>
                                         </fieldset>
