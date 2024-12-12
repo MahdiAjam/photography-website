@@ -29,9 +29,24 @@ class ContactUs(models.Model):
         return f'{self.email} - {self.text}'
 
 
-class Skill(models.Model):
-    skill = models.CharField(max_length=100)
-    proficiency = models.IntegerField(help_text="Proficiency out of 100")
+class YourProject(models.Model):
+    project_name = models.CharField(max_length=100)
+    project_number = models.IntegerField()
 
     def __str__(self):
-        return f'{self.skill} - {self.proficiency}'
+        return f'{self.project_name}-{self.project_number}'
+
+class YourSkill(models.Model):
+    skill_name = models.CharField(max_length=100)
+    skill_percent = models.IntegerField(help_text='out of 100')
+
+    def __str__(self):
+        return f'{self.skill_name}-{self.skill_percent}'
+class About(models.Model):
+    description = models.TextField()
+    project = models.ManyToManyField(YourProject)
+    skill = models.ManyToManyField(YourSkill)
+
+    def __str__(self):
+        return f'{self.id} - this is your about'
+

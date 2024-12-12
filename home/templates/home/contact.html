@@ -41,8 +41,7 @@
                                         </li>
                                         <li><span>تلفن:</span>
                                             {% for phone in contact.phone.all %}
-                                                <a href="tel:{{ phone.phone }}"></a>{{ phone.phone }}
-                                                <a href="tel:{{ phone.phone }}">{{ phone.phone }}</a>
+                                                <a href="">{{ phone.phone }} / </a>
                                             {% endfor %}
                                         </li>
                                     </ul>
