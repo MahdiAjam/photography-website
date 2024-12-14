@@ -11,8 +11,11 @@ class BlogDetailView(View):
         return render(request, 'portfo/blog_detail.html')
 
 class PortfolioView(View):
-    def get(self, request):
-        return render(request, 'portfo/portfolio.html')
+    def get(self, request, portfolio_id=None):
+        portfo = PortfolioDetail.objects.all()
+        if portfolio_id:
+            portfo.filter(id=portfolio_id)
+        return render(request, 'portfo/portfolio.html', {'portfo': portfo})
 
 class PortfolioDetailView(View):
     def get(self, request, portfolio_id):

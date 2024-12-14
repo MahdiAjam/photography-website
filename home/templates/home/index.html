@@ -14,61 +14,22 @@
                     <div class="swiper-container full-height ">
                         <div class="swiper-wrapper">
                             <!-- swiper-slide-->
-                            <div class="swiper-slide">
-                                <div class="main-carousel_item fs-wrapper">
-                                    <div class="bg" data-bg="{% static 'images/bg/13.jpg' %}" data-swiper-parallax="10%"></div>
-                                    <div class="overlay"></div>
-                                    <div class="thumb-info">
-                                        <h3><a href="portfolio-single.html" class="ajax">طرف دیگر من</a></h3>
-                                        <p>در اینجا می‌توانید توضیح اختیاری پروژه خود را قرار دهید</p>
-                                        <a href="portfolio-single.html" class="ajax fs-slider-item_btn">مشاهده مورد</a>
+                            {% for i in portfo %}
+                                <div class="swiper-slide">
+                                    <div class="main-carousel_item fs-wrapper">
+                                        <div class="bg" {% for image in i.images.all %} data-bg="{{ image.image.url }}" {% endfor %} data-swiper-parallax="10%"></div>
+                                        <div class="overlay"></div>
+                                        <div class="thumb-info">
+                                            <h3><a href="{{ i.get_absolute_url }}" class="ajax">{{ i.title }}</a></h3>
+                                            <p>{{ i.short_description }}</p>
+                                            <a href="{{ i.get_absolute_url }}" class="ajax fs-slider-item_btn">مشاهده
+                                                مورد</a>
+                                        </div>
+                                        <div class="slide_category">{{ i.category }}</div>
                                     </div>
-                                    <div class="slide_category">فضای باز</div>
                                 </div>
-                            </div>
-                            <!-- swiper-slide end-->
-                            <!-- swiper-slide-->
-                            <div class="swiper-slide">
-                                <div class="main-carousel_item fs-wrapper">
-                                    <div class="bg" data-bg="{% static 'images/bg/17.jpg' %}" data-swiper-parallax="10%"></div>
-                                    <div class="overlay"></div>
-                                    <div class="thumb-info">
-                                        <h3><a href="portfolio-single.html" class="ajax">طرف آفتابی بالا</a></h3>
-                                        <p>در اینجا می‌توانید توضیح اختیاری پروژه خود را قرار دهید</p>
-                                        <a href="portfolio-single.html" class="ajax fs-slider-item_btn">مشاهده مورد</a>
-                                    </div>
-                                    <div class="slide_category">فضای باز</div>
-                                </div>
-                            </div>
-                            <!-- swiper-slide end-->
-                            <!-- swiper-slide-->
-                            <div class="swiper-slide">
-                                <div class="main-carousel_item fs-wrapper">
-                                    <div class="bg" data-bg="{% static 'images/bg/1.jpg' %}" data-swiper-parallax="10%"></div>
-                                    <div class="overlay"></div>
-                                    <div class="thumb-info">
-                                        <h3><a href="portfolio-single.html" class="ajax">یک زندگی شگفت‌انگیز</a></h3>
-                                        <p>در اینجا می‌توانید توضیح اختیاری پروژه خود را قرار دهید</p>
-                                        <a href="portfolio-single.html" class="ajax fs-slider-item_btn">مشاهده مورد</a>
-                                    </div>
-                                    <div class="slide_category">models</div>
-                                </div>
-                            </div>
-                            <!-- swiper-slide end-->
-                            <!-- swiper-slide-->
-                            <div class="swiper-slide">
-                                <div class="main-carousel_item fs-wrapper">
-                                    <div class="bg" data-bg="{% static 'images/bg/16.jpg' %}" data-swiper-parallax="10%"></div>
-                                    <div class="overlay"></div>
-                                    <div class="thumb-info">
-                                        <h3><a href="portfolio-single.html" class="ajax">تنها در طبیعت</a></h3>
-                                        <p>در اینجا می‌توانید توضیح اختیاری پروژه خود را قرار دهید</p>
-                                        <a href="portfolio-single.html" class="ajax fs-slider-item_btn">مشاهده مورد</a>
-                                    </div>
-                                    <div class="slide_category">فضای باز</div>
-                                </div>
-                            </div>
-                            <!-- swiper-slide end-->
+                                <!-- swiper-slide end-->
+                            {% endfor %}
                         </div>
                     </div>
                 </div>

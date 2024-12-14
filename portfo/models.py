@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models.signals import post_delete
 from django.dispatch import receiver
+from django.urls import reverse
 
 class PortfolioDetail(models.Model):
     title = models.CharField(max_length=100)
@@ -15,6 +16,10 @@ class PortfolioDetail(models.Model):
 
     def __str__(self):
         return f'{self.title}-{self.category}'
+
+    def get_absolute_url(self):
+        return reverse('portfo:portfolio detail', args=[self.id])
+
 
 class PortfolioImage(models.Model):
     portfolio = models.ForeignKey(PortfolioDetail, on_delete=models.CASCADE, related_name='images')

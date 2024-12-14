@@ -1,12 +1,19 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import View
-from .models import ContactDetail, PhoneNumber, ContactUs, About
+from .models import ContactDetail, About
 from .forms import ContactUsForm
+from portfo.models import PortfolioDetail
 
 class HomeView(View):
-    def get(self, request):
-        return render(request, 'home/index.html')
+    def get(self, request, portfolio_id=None):
+        portfo = PortfolioDetail.objects.order_by('-id')[:4]
+        if portfolio_id:
+            portfo.filter(id=portfolio_id)
+        return render(request, 'home/index.html', {'portfo': portfo})
 
+    def post(self, request, portfo_id):
+        portfo = get_object_or_404(PortfolioDetail, id=portfo_id)
+        return render(request, 'portfo/portfolio_detail.html', )
 
 class AboutView(View):
     template_name = 'home/about.html'
