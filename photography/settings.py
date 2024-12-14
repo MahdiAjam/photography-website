@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # local apps
     'home.apps.HomeConfig',
     'portfo.apps.PortfoConfig',
+
 ]
 
 MIDDLEWARE = [

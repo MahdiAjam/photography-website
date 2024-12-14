@@ -40,7 +40,7 @@
                                         <li><span>آدرس:</span><a href="#" target="_blank">{{ contact.location }}</a>
                                         </li>
                                         <li><span>تلفن:</span>
-                                            {% for phone in contact.phone.all %}
+                                            {% for phone in contact.phones.all %}
                                                 <a href="">{{ phone.phone }} / </a>
                                             {% endfor %}
                                         </li>

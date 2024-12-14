@@ -21,8 +21,7 @@
                 <div class="overlay"></div>
                 <div class="column-title">
                     <h2>نمونه کارها</h2>
-                    <h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ. ماسیناس این پولوینار نیکوی. نولا
-                        فینیبوس لوبورتیس پولوینار.</h3>
+                    <h3>در این صفحه شما می توانید نمونه کارهای مختلف ما که در موضات و دسته بندی های مختلفی طبقه بندی شده است را ببینید.</h3>
                 </div>
                 <div class="ci_dec"><span></span></div>
             </div>
@@ -32,9 +31,8 @@
                 <section id="sec1">
                     <div class="container small-container">
                         <div class="section-title fl-wrap">
-                            <h3>به نیویورک خوش آمدید</h3>
-                            <h4>اما زمان، توده‌ای از خاردارها و تسهیلات را فراهم می‌آورد. در تخمیر، تسهیل‌های
-                                توده‌ای</h4>
+                            <h3>{{ portfolio.title }}</h3>
+                            <h4>{{ portfolio.short_description }}</h4>
                             <div class="section-number">01.</div>
                         </div>
                     </div>
@@ -54,106 +52,48 @@
                             </div>
                         </div>
                         <div class="single-post-container" style="margin: 30px 0 20px">
-                            <p>لورم ایپسوم دولور سیت آمت، کانسکتتور آدیپیسکینگ الیت. پروین اورناره سم سد کوا مپس آلکویت
-                                ویتائه اگت دولور. پروین او اولتریس لیبرو. آلیکام ارات ولپات. آنیان سمپر دوی آیید آکومسان
-                                پلوینار. آلیکام کانگه مّولیس تورپی، آ ولپات متوس لوبرتس نک. اینتگر این مّولیس کوا. کریس
-                                نیسل می، دابیوس آ آنته نان، آکومسان لوکتوس آوگه.
-                            </p>
+                            <p>{{ portfolio.video_description }}</p>
                         </div>
                         <!-- portfolio start -->
                         <div class="gallery-items gallery-items_single lightgallery  two-column big-padding sg_items scale_anim">
                             <!-- gallery-item-->
+                            {% for image in portfolio.images.all %}
                             <div class="gallery-item">
                                 <div class="grid-item-holder  hov_zoom">
-                                    <a href="{% static 'images/folio/3.jpg' %}" class="box-media-zoom   popup-image"><i
+                                    <a href="{{ image.image.url }}" class="box-media-zoom   popup-image"><i
                                             class="fal fa-search"></i></a>
-                                    <img src="{% static 'images/folio/3.jpg' %}" alt="">
+                                    <img src="{{ image.image.url }}" alt="Image for {{ portfolio.title }}">
                                 </div>
                             </div>
-                            <!-- gallery-item end-->
-                            <!-- gallery-item-->
-                            <div class="gallery-item">
-                                <div class="grid-item-holder  hov_zoom">
-                                    <a href="{% static 'images/folio/4.jpg' %}" class="box-media-zoom   popup-image"><i
-                                            class="fal fa-search"></i></a>
-                                    <img src="{% static 'images/folio/4.jpg' %}" alt="">
-                                </div>
-                            </div>
-                            <!-- gallery-item end-->
-                            <!-- gallery-item-->
-                            <div class="gallery-item">
-                                <div class="grid-item-holder  hov_zoom">
-                                    <a href="{% static 'images/folio/14.jpg' %}" class="box-media-zoom   popup-image"><i
-                                            class="fal fa-search"></i></a>
-                                    <img src="{% static 'images/folio/14.jpg' %}" alt="">
-                                </div>
-                            </div>
-                            <!-- gallery-item end-->
-                            <!-- gallery-item-->
-                            <div class="gallery-item">
-                                <div class="grid-item-holder  hov_zoom">
-                                    <a href="{% static 'images/folio/10.jpg' %}" class="box-media-zoom   popup-image"><i
-                                            class="fal fa-search"></i></a>
-                                    <img src="{% static 'images/folio/10.jpg' %}" alt="">
-                                </div>
-                            </div>
-                            <!-- gallery-item end-->
-                            <!-- gallery-item-->
-                            <div class="gallery-item">
-                                <div class="grid-item-holder  hov_zoom">
-                                    <a href="{% static 'images/folio/19.jpg' %}" class="box-media-zoom   popup-image"><i
-                                            class="fal fa-search"></i></a>
-                                    <img src="{% static 'images/folio/19.jpg' %}" alt="">
-                                </div>
-                            </div>
-                            <!-- gallery-item end-->
-                            <!-- gallery-item-->
-                            <div class="gallery-item">
-                                <div class="grid-item-holder  hov_zoom">
-                                    <a href="{% static 'images/folio/6.jpg' %}" class="box-media-zoom   popup-image"><i
-                                            class="fal fa-search"></i></a>
-                                    <img src="{% static 'images/folio/6.jpg' %}" alt="">
-                                </div>
-                            </div>
+                            {% endfor %}
                             <!-- gallery-item end-->
                         </div>
                         <!-- gallery-items end -->
                     </div>
                     <div class="container small-container">
                         <div class="single_det_wrap">
-                            <p>لورم ایپسوم دولور سیت آمت، کانسکتتور آدیپیسکینگ الیت. مائسناس این پولوینار نِک. نولا
-                                فینیبوس لوبرتس پولوینار. دانک آ کانسکتتور نولا. نولا پوسوئره ساپیئن ویتائه لکتوس
-                                سوپ‌سیت، ات پولوینار نیسی تینسیدنت. آلیکام ارات ولپات. کوریبیتر کنوالیس فریجیللا دیام سد
-                                آلیکام. سد تمپور یاکولیس ماسا فاوکسبوس فاسیلسیس. این فرمنتوم فاسیلسیس ماسا، آ کونکوات
-                                پوروس وویرا. پرزنت نِک لئو وِنناتیس الیت سمپر آلکویت آید آک اینیم. مائسناس نِک می لئو.
-                                اتیام وِنناتیس اوت دوی نان هندریت. اینتگر دیکتوم، دیام ویتائه بلاندیت آکومسان، دولور
-                                اودیو تمپور آرکُ. کریس ماتیس جودیشیوم پوروس سی آمت فرمنتوم آت نوس هینک پست‌هاک،
-                                سی‌تی‌ینتیس پیروس آفروس.
-                            </p>
-                            <p> کریس ماتیس جودیشیوم پوروس سی آمت فرمنتوم آت نوس هینک پست‌هاک، سی‌تی‌ینتیس پیروس آفروس.
-                                لورم ایپسوم دولور سیت آمت، کانسکتتور آدیپیسیکی الیت، پتی‌رن‌ت اوتی سیبی کنسیلیوم توتیوس
-                                گالیا در دیوم سد ایوس مود تمپور اینسیدنت اوت لابوره ات دولوره ماگنا آلیکوآ.</p>
+                            <p>{{ portfolio.description }}</p>
                             <div class="caption-wrap   det-anim">
                                 <ul>
                                     <li>
                                         <span>موقعیت</span>
-                                        <a href="#">نیویورک، آمریکا</a>
+                                        <a href="#">{{ portfolio.location }}</a>
                                     </li>
                                     <li>
                                         <span>دسته‌بندی</span>
-                                        <a href="#">سفر</a>
+                                        <a href="#">{{ portfolio.category }}</a>
                                     </li>
                                     <li>
                                         <span>مدل</span>
-                                        <a href="#">آستین انیش</a>
+                                        <a href="#">{{ portfolio.model }}</a>
                                     </li>
                                     <li>
                                         <span>دوربین</span>
-                                        <a href="#">کانن ۶دی</a>
+                                        <a href="#">{{ portfolio.camera }}</a>
                                     </li>
                                 </ul>
                             </div>
-                            <a href="#" class="btn">مشاهده مورد</a>
+                            <a href="" class="btn">مشاهده مورد</a>
                         </div>
                     </div>
                 </section>

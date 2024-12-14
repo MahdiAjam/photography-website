@@ -33,7 +33,7 @@
                                 <p>{{ about.description }}</p>
                                 <div class="inline-facts-holder fl-wrap">
                                     <!-- inline-facts -->
-                                    {% for i in about.project.all %}
+                                    {% for i in about.projects.all %}
                                         <div class="inline-facts">
                                             <div class="milestone-counter">
                                                 <div class="stats animaper">
@@ -127,7 +127,7 @@
                             <div class="column-wrapper_text fl-wrap">
                                 <div class="skillbar-box animaper">
                                     <!-- skill 1-->
-                                    {% for i in about.skill.all %}
+                                    {% for i in about.skills.all %}
                                         <div class="skillbar_item">
                                             <div class="custom-skillbar-title"><span>{{ i.skill_name }}</span></div>
                                             <div class="skill-bar-percent">{{ i.skill_percent }}</div>
