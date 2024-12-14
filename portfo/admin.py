@@ -6,6 +6,7 @@ class PortfolioImageInline(admin.TabularInline):
     extra = 1
 
 class PortfolioDetailAdmin(admin.ModelAdmin):
+    prepopulated_fields = {'slug': ('title',)}
     inlines = [PortfolioImageInline]
 
 

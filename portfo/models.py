@@ -2,9 +2,12 @@ from django.db import models
 from django.db.models.signals import post_delete
 from django.dispatch import receiver
 from django.urls import reverse
+from django.utils.text import slugify
+
 
 class PortfolioDetail(models.Model):
     title = models.CharField(max_length=100)
+    slug = models.SlugField(max_length=100)
     short_description = models.CharField(max_length=255)
     video = models.FileField(upload_to='video/portfolio', null=True, blank=True)
     video_description = models.TextField(null=True, blank=True)
@@ -20,6 +23,11 @@ class PortfolioDetail(models.Model):
     def get_absolute_url(self):
         return reverse('portfo:portfolio detail', args=[self.id])
 
+    def save(self, *args, **kwargs):
+        if self.slug:
+            self.slug = slugify(self.slug)
+        super().save(*args, **kwargs)
+
 
 class PortfolioImage(models.Model):
     portfolio = models.ForeignKey(PortfolioDetail, on_delete=models.CASCADE, related_name='images')
@@ -28,10 +36,12 @@ class PortfolioImage(models.Model):
     def __str__(self):
         return f'Image for {self.portfolio.title}'
 
+
 @receiver(post_delete, sender=PortfolioImage)
 def delete_image_file(sender, instance, **kwargs):
     if instance.image:
         instance.image.delete(save=False)
+
 
 @receiver(post_delete, sender=PortfolioDetail)
 def delete_video_file(sender, instance, **kwargs):
