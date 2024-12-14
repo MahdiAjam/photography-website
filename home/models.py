@@ -29,7 +29,6 @@ class ContactUs(models.Model):
         return f'{self.email} - {self.text}'
 
 
-
 class About(models.Model):
     description = models.TextField()
 
@@ -45,6 +44,7 @@ class YourProject(models.Model):
     def __str__(self):
         return f'{self.project_name}-{self.project_number}'
 
+
 class YourSkill(models.Model):
     about = models.ForeignKey(About, on_delete=models.CASCADE, related_name='skills')
     skill_name = models.CharField(max_length=100)
@@ -52,4 +52,3 @@ class YourSkill(models.Model):
 
     def __str__(self):
         return f'{self.skill_name}-{self.skill_percent}'
-
