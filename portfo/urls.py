@@ -7,4 +7,6 @@ urlpatterns = [
     path('blog/sample/', views.BlogDetailView.as_view(), name='blog detail'),
     path('portfolio/', views.PortfolioView.as_view(), name='portfolio'),
     path('portfolio/<int:portfolio_id>/', views.PortfolioDetailView.as_view(), name='portfolio detail'),
+    path('category/<int:category_id>/', views.PortfolioView.as_view(), name='category'),
+
 ]

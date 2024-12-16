@@ -1,4 +1,5 @@
 {% load static %}
+{% load social_share %}
 <div class="sidebar-wrap">
     <div class="sidebar-wrap-container">
         <!-- sb-widget-wrap-->
@@ -8,12 +9,13 @@
                 <div class="categories_widget-wrap">
                     <!-- categories_widget_item-->
                     {% for i in portfo %}
-                    <a class="categories_widget_item" href="{{ i.get_absolute_url }}">
-                        <div class="categories_widget_item_img">
-                            <img {% for image in i.images.all %} src="{{ image.image.url }}" {% endfor %} class="respimg" alt="">
-                        </div>
-                        <span class="categories_widget_title">{{ i.title }}</span>
-                    </a>
+                        <a class="categories_widget_item" href="{{ i.get_absolute_url }}">
+                            <div class="categories_widget_item_img">
+                                <img {% for image in i.images.all %} src="{{ image.image.url }}" {% endfor %}
+                                                                     class="respimg" alt="">
+                            </div>
+                            <span class="categories_widget_title">{{ i.title }}</span>
+                        </a>
                     {% endfor %}
                     <!-- categories_widget_item end-->
                 </div>
@@ -26,10 +28,9 @@
             <div class="sb-widget    fl-wrap">
                 <div class="sidebar-social fl-wrap">
                     <ul>
-                        <li><a href="#" target="_blank">فیسبوک</a></li>
-                        <li><a href="#" target="_blank">توییتر</a></li>
-                        <li><a href="#" target="_blank">اینستاگرام</a></li>
-                        <li><a href="#" target="_blank">تیک</a></li>
+                        <li> {% post_to_linkedin i.get_absolute_url "linkedin" %}</li>
+                        <li> {% post_to_whatsapp i.get_absolute_url "whatsapp" %}</li>
+                        <li> {% post_to_telegram i.get_absolute_url "telegram" %}</li>
                     </ul>
                 </div>
             </div>

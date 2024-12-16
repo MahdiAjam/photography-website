@@ -56,10 +56,9 @@
             <div class="gallery-filters-wrap">
                 <div class="gallery-filters">
                     <a href="#" class="gallery-filter  gallery-filter-active" data-filter="*">همه موارد</a>
-                    <a href="#" class="gallery-filter" data-filter=".nature"> طبیعت</a>
-                    <a href="#" class="gallery-filter" data-filter=".models">مدل‌ها</a>
-                    <a href="#" class="gallery-filter" data-filter=".couples"> زوج‌ها</a>
-                    <a href="#" class="gallery-filter" data-filter=".outdoor"> بیرون از خانه</a>
+                    {% for category in categories %}
+                        <a href="{{ category.get_absolute_url }}" class="gallery-filter" data-filter="">{{ category.name }}</a>
+                    {% endfor %}
                 </div>
                 <div class="gallery-filters-overlay"></div>
             </div>

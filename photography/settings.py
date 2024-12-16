@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'portfo.apps.PortfoConfig',
 
+    # third-party apps
+    'django_social_share',
 ]
 
 MIDDLEWARE = [

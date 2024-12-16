@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import PortfolioDetail, PortfolioImage
+from .models import PortfolioDetail, PortfolioImage, Category
 
 class PortfolioImageInline(admin.TabularInline):
     model = PortfolioImage
@@ -11,3 +11,4 @@ class PortfolioDetailAdmin(admin.ModelAdmin):
 
 
 admin.site.register(PortfolioDetail, PortfolioDetailAdmin)
+admin.site.register(Category)

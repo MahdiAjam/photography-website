@@ -11,10 +11,6 @@ class HomeView(View):
             portfo.filter(id=portfolio_id)
         return render(request, 'home/index.html', {'portfo': portfo})
 
-    def post(self, request, portfo_id):
-        portfo = get_object_or_404(PortfolioDetail, id=portfo_id)
-        return render(request, 'portfo/portfolio_detail.html', )
-
 class AboutView(View):
     template_name = 'home/about.html'
     def get(self, request):

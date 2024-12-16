@@ -5,7 +5,22 @@ from django.urls import reverse
 from django.utils.text import slugify
 
 
+
+class Category(models.Model):
+    name = models.CharField(max_length=100)
+    slug = models.SlugField(max_length=100)
+
+    class Meta:
+        ordering = ('name',)
+    def __str__(self):
+        return f'{self.name}'
+
+    def get_absolute_url(self):
+        return reverse('portfo:category', args=[self.id,])
+
+
 class PortfolioDetail(models.Model):
+    categories = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='portfolios', null=True, blank=True)
     title = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100)
     short_description = models.CharField(max_length=255)
@@ -47,3 +62,5 @@ def delete_image_file(sender, instance, **kwargs):
 def delete_video_file(sender, instance, **kwargs):
     if instance.video:
         instance.video.delete(save=False)
+
+

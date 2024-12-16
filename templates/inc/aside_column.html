@@ -1,12 +1,12 @@
 {% load static %}
+{% load social_share %}
 <div class="aside-column">
     <!-- social_links-->
     <div class="header_social">
         <ul>
-            <li><a href="#" target="_blank">فیسبوک</a></li>
-            <li><a href="#" target="_blank">اینستاگرام</a></li>
-            <li><a href="#" target="_blank">توییتر</a></li>
-            <li><a href="#" target="_blank">تیک</a></li>
+            <li> {% post_to_linkedin i.get_absolute_url "linkedin" %}</li>
+            <li> {% post_to_whatsapp i.get_absolute_url "whatsapp" %}</li>
+            <li> {% post_to_telegram i.get_absolute_url "telegram" %}</li>
         </ul>
     </div>
     <!-- social_links end-->
