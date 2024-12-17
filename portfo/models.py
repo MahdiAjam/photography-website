@@ -5,18 +5,18 @@ from django.urls import reverse
 from django.utils.text import slugify
 
 
-
 class Category(models.Model):
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100)
 
     class Meta:
         ordering = ('name',)
+
     def __str__(self):
         return f'{self.name}'
 
     def get_absolute_url(self):
-        return reverse('portfo:category', args=[self.id,])
+        return reverse('portfo:category', args=[self.id, ])
 
 
 class PortfolioDetail(models.Model):
@@ -64,3 +64,29 @@ def delete_video_file(sender, instance, **kwargs):
         instance.video.delete(save=False)
 
 
+class BlogDetail(models.Model):
+    title = models.CharField(max_length=100)
+    short_description = models.CharField(max_length=255)
+    image = models.ImageField(upload_to='images/blog/')
+    tag = models.ManyToManyField(Category, related_name='tags')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f'{self.title}-{self.tag}'
+
+    def get_absolute_url(self):
+        return reverse('portfo:blog detail', args=[self.id])
+
+
+class ContentBlog(models.Model):
+    blog_post = models.ForeignKey(BlogDetail, on_delete=models.CASCADE, related_name='blogs')
+    description = models.TextField(null=True, blank=True)
+    image = models.ImageField(upload_to='images/blog/', null=True, blank=True)
+    order = models.PositiveIntegerField()
+
+    class Meta:
+        ordering = ['order',]
+
+    def __str__(self):
+        return f'{self.order}'

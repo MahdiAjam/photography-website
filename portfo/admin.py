@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import PortfolioDetail, PortfolioImage, Category
+from .models import PortfolioDetail, PortfolioImage, Category, BlogDetail, ContentBlog
 
 class PortfolioImageInline(admin.TabularInline):
     model = PortfolioImage
@@ -9,6 +9,14 @@ class PortfolioDetailAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     inlines = [PortfolioImageInline]
 
+class ContentBlogInline(admin.TabularInline):
+    model = ContentBlog
+    extra = 2
+
+class BlogDetailAdmin(admin.ModelAdmin):
+    inlines = [ContentBlogInline]
+
 
 admin.site.register(PortfolioDetail, PortfolioDetailAdmin)
 admin.site.register(Category)
+admin.site.register(BlogDetail, BlogDetailAdmin)
