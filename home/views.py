@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import View
-from .models import ContactDetail, About
+from .models import ContactDetail, About, Service
 from .forms import ContactUsForm
 from portfo.models import PortfolioDetail
 
@@ -15,7 +15,8 @@ class AboutView(View):
     template_name = 'home/about.html'
     def get(self, request):
         about = get_object_or_404(About)
-        return render(request, self.template_name, {'about': about})
+        service = Service.objects.all()
+        return render(request, self.template_name, {'about': about, 'service': service})
 
 
 class ContactView(View):

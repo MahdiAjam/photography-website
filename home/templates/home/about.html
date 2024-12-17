@@ -57,8 +57,7 @@
                     <div class="container small-container">
                         <div class="section-title fl-wrap">
                             <h3>خدمات و قیمت‌ها</h3>
-                            <h4>اما زمان، توده‌ای از خاردارها و تسهیلات را فراهم می‌آورد. در تخمیر، تسهیل‌های
-                                توده‌ای</h4>
+                            <h4>در اینجا شما می توانید خدمات و قیمت های ما را ببینید.</h4>
                             <div class="section-number">02.</div>
                         </div>
                         <div class="column-wrapper_item fl-wrap">
@@ -66,41 +65,24 @@
                                 <!-- serv-wrap-->
                                 <div class="serv-wrap fl-wrap">
                                     <!-- serv-item -->
-                                    <div class="serv-item">
-                                        <div class="serv-media">
-                                            <img src="{% static 'images/folio/6.jpg' %}" alt="">
-                                        </div>
-                                        <div class="serv-text">
-                                            <h4><a href="#">عکاسی عروسی</a></h4>
-                                            <p> اما بلاندیت، دولور آید آلیکام وس‌توبولوم، نیب الیت امپردیت تورپی، کیس
-                                                مولستیه کوا امرا ول نیسی.</p>
-                                            <ul>
-                                                <li><a href="#">پرتره‌ها</a></li>
-                                                <li><a href="#">عروسی‌ها</a></li>
-                                                <li><a href="#">تبلیغات</a></li>
-                                            </ul>
-                                            <div class="serv-price">قیمت:<span> ۲,۵۰۰,۰۰۰ - ۱۲,۰۰۰,۰۰۰ تومان</span>
+                                    {% for i in service %}
+                                        <div class="serv-item">
+                                            <div class="serv-media">
+                                                <img src="{{ i.image.url }}" alt="">
+                                            </div>
+                                            <div class="serv-text">
+                                                <h4><a href="{% url 'home:contact' %}">{{ i.title }}</a></h4>
+                                                <p>{{ i.description }}</p>
+                                                <ul>
+                                                    {% for category in i.categories.all %}
+                                                        <li><a href="">{{ category.name }}</a></li>
+                                                    {% endfor %}
+                                                </ul>
+                                                <div class="serv-price">قیمت:<span> {{ i.price }} تومان </span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- serv-item end -->
-                                    <!-- serv-item -->
-                                    <div class="serv-item">
-                                        <div class="serv-media">
-                                            <img src="{% static 'images/folio/17.jpg' %}" alt="">
-                                        </div>
-                                        <div class="serv-text">
-                                            <h4><a href="#">عکاسی تجاری</a></h4>
-                                            <p> اما بلاندیت، دولور آید آلیکام وس‌توبولوم، نیب الیت امپردیت تورپی، کیس
-                                                مولستیه کوا امرا ول نیسی.</p>
-                                            <ul>
-                                                <li><a href="#">فیلمبرداری</a></li>
-                                                <li><a href="#">مونتاژ</a></li>
-                                                <li><a href="#">حرکت آهسته</a></li>
-                                            </ul>
-                                            <div class="serv-price">قیمت:<span> ۳,۵۰۰,۰۰۰ - ۹,۰۰۰,۰۰۰ تومان</span></div>
-                                        </div>
-                                    </div>
+                                    {% endfor %}
                                     <!-- serv-item end -->
                                 </div>
                                 <!-- serv-wrap end -->

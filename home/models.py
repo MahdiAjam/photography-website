@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class ContactDetail(models.Model):
@@ -52,3 +53,23 @@ class YourSkill(models.Model):
 
     def __str__(self):
         return f'{self.skill_name}-{self.skill_percent}'
+
+
+class Service(models.Model):
+    title = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='images/services/')
+    description = models.CharField(max_length=255)
+    price = models.IntegerField()
+
+    def __str__(self):
+        return f'{self.title}-{self.price}'
+
+class Category(models.Model):
+    contact = models.ForeignKey(Service, on_delete=models.CASCADE, related_name='categories')
+    name = models.CharField(max_length=100)
+
+    class Meta:
+        ordering = ('name',)
+
+    def __str__(self):
+        return f'{self.name}'
