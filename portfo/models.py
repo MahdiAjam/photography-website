@@ -90,3 +90,14 @@ class ContentBlog(models.Model):
 
     def __str__(self):
         return f'{self.order}'
+
+
+class Comment(models.Model):
+    blog_post = models.ForeignKey(BlogDetail, on_delete=models.CASCADE, related_name='comments')
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    text = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.name}-{self.email}'

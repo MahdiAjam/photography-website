@@ -118,48 +118,29 @@
                         </div>
                         <div class="commnets-list">
                             <!-- comment-item -->
-                            <div class="comment-item">
-                                <div class="comment-author">
-                                    <img alt="" src="{% static 'images/avatar/2.jpg' %}" width="50" height="50">
-                                    <h5><a href="#">کوین</a></h5>
-                                    <h6><a href="#">۱۲ دی ۱۴۰۰ </a></h6>
+                            {% for comments in comment %}
+                                <div class="comment-item">
+                                    <div class="comment-author">
+                                        <img alt="" src="{% static 'images/avatar/2.jpg' %}" width="50" height="50">
+                                        <h5><a href="">{{ comments.name }}</a></h5>
+                                        <h6><a href="">{{ comments.created_at|date }}</a></h6>
+                                    </div>
+                                    <div class="comment-body gray-bg">
+                                        <p>{{ comments.text }}</p>
+                                        <div class="comm-num">{{ forloop.counter }}</div>
+                                    </div>
                                 </div>
-                                <div class="comment-body gray-bg">
-                                    <p>"لورم ایپسوم دولور سیت آمت، کانسکتتور آدیپیسکینگ الیت. فاسلوس هندریت. پِلنتسکوئه
-                                        آلکویت نیب نِک اورنا. این نیسی نِک، آلکویت ول، دابیوس آید، ماتیس ول، نیسی. سد
-                                        پریتیوم، لیگولا سولیسیتودین لوریت وویرا، تورتور لیبرو سودالس لئو، اگت بلاندیت
-                                        نانک تورتور او نیب. نولام مّولیس. اوت جوستو." </p>
-                                    <div class="comm-num">01.</div>
-                                </div>
-                            </div>
-                            <!--comment-item end -->
-                            <!-- comment-item -->
-                            <div class="comment-item">
-                                <div class="comment-author">
-                                    <img alt="" src="{% static 'images/avatar/3.jpg' %}" width="50" height="50">
-                                    <h5><a href="#">الکسا</a></h5>
-                                    <h6><a href="#">۲۳ دی ۱۳۹۹ </a></h6>
-                                </div>
-                                <div class="comment-body gray-bg">
-                                    <p>"لورم ایپسوم دولور سیت آمت، کانسکتتور آدیپیسکینگ الیت. فاسلوس هندریت. پِلنتسکوئه
-                                        آلکویت نیب نِک اورنا. این نیسی نِک، آلکویت ول، دابیوس آید، ماتیس ول، نیسی. سد
-                                        پریتیوم، لیگولا سولیسیتودین لوریت وویرا، تورتور لیبرو سودالس لئو، اگت بلاندیت
-                                        نانک تورتور او نیب. نولام مّولیس. اوت جوستو." </p>
-                                    <div class="comm-num">02.</div>
-                                </div>
-                            </div>
+                            {% endfor %}
                             <!--comment-item end -->
                         </div>
                         <div class="comment-form">
                             <div class="section-title n_dec st_small">
                                 <h3>افزودن نظر</h3>
                             </div>
-                            <form class="custom-form" name="commentform" id="commentform">
+                            <form class="custom-form" method="post">
+                                {% csrf_token %}
                                 <fieldset>
-                                    <input type="text" name="name" id="name" placeholder="نام شما *" value="">
-                                    <input type="text" name="email" id="email" placeholder="آدرس ایمیل *" value="">
-                                    <textarea name="comments" id="comments" cols="40" rows="3"
-                                              placeholder="پیام شما:"></textarea>
+                                    {{ form.as_p }}
                                     <button class="btn" id="submit">ارسال نظر</button>
                                 </fieldset>
                             </form>
@@ -182,7 +163,7 @@
                         <div class="scroller"></div>
                     </div>
                 </div>
-                <a href="index.html" class="bth_btn hbn_vis"><i class="fal fa-home-lg-alt"></i><strong>بازگشت به
+                <a href="{% url 'portfo:blog' %}" class="bth_btn hbn_vis"><i class="fal fa-home-lg-alt"></i><strong>بازگشت به
                     خانه</strong></a>
                 <div class="progress-bar-wrap">
                     <div class="progress-bar color-bg"></div>
