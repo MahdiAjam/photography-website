@@ -1,17 +1,25 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import View
 from .models import PortfolioDetail, Category, BlogDetail, Comment
-from .forms import CommentForm
+from .forms import CommentForm, SearchForm
 
 
 class BlogView(View):
+    form_class = SearchForm
+
     def get(self, request, category_id=None):
         blog = BlogDetail.objects.all()
         categories = Category.objects.all()
+
+        if request.GET.get('search'):
+            blog = blog.filter(title__contains=request.GET['search'])
+
         if category_id:
             category = Category.objects.get(id=category_id)
             blog = blog.filter(category=category)
-        return render(request, 'portfo/blog.html', {'blog': blog, 'categories': categories})
+
+        return render(request, 'portfo/blog.html', {'blog': blog, 'categories': categories,
+                                                    'form': self.form_class})
 
 
 class BlogDetailView(View):
@@ -33,7 +41,7 @@ class BlogDetailView(View):
             new_comment.save()
             return redirect('portfo:blog detail', blog_id=blog_id)
         comment = Comment.objects.filter(blog_post_id=blog_id)
-        return render(request, self.template_name, {'form': form, 'blog': blog,  'comment': comment})
+        return render(request, self.template_name, {'form': form, 'blog': blog, 'comment': comment})
 
 
 class PortfolioView(View):

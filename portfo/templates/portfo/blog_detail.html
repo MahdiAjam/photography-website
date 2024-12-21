@@ -13,8 +13,7 @@
                 <div class="overlay"></div>
                 <div class="column-title">
                     <h2>آخرین اخبار ما</h2>
-                    <h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ. ماسیناس این پولوینار نیکوی. نولا
-                        فینیبوس لوبورتیس پولوینار.</h3>
+                    <h3>در این صفحه تمام اخبار مربوطه به موضوع را می توانید بخوانید.</h3>
                 </div>
                 <div class="ci_dec"><span></span></div>
             </div>
@@ -24,37 +23,6 @@
                 <!-- section -->
                 <section>
                     <div class="container small-container">
-                        <div class="blog-opt">
-                            <div class="blog-search-wrap custom-form">
-                                <input name="se" id="se" type="text" class="search" placeholder="جستجو..." value="">
-                                <button><i class="far fa-search"></i></button>
-                            </div>
-                            <!-- filter category    -->
-                            <div class="category-filter blog-btn-filter">
-                                <div class="blog-btn">Categories / برچسبs</div>
-                                <div class="blog-filter-wrap">
-                                    <div class="blog-filter-wrap_item" data-bfgt="Categories">
-                                        <ul>
-                                            <li><a href="#">طراحی داخلی</a></li>
-                                            <li><a href="#">طبیعت</a></li>
-                                            <li><a href="#">تجاری</a></li>
-                                            <li><a href="#">سفر</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="blog-filter-wrap_item" data-bfgt="برچسبs">
-                                        <ul>
-                                            <li><a href="#">وبلاگ</a></li>
-                                            <li><a href="#">عکاسی</a></li>
-                                            <li><a href="#">نمونه‌کار</a></li>
-                                            <li><a href="#">برچسب</a></li>
-                                            <li><a href="#">ویدیو</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="blog-filter-wrap_title"></div>
-                                </div>
-                            </div>
-                            <!-- filter category end  -->
-                        </div>
                         <div class="section-title  n_dec">
                             <h3>{{ blog.title }}</h3>
                             <h4>{{ blog.short_description }}</h4>
@@ -152,7 +120,7 @@
                     <div class="container small-container">
                         <h4>آیا آماده سفارش پروژه خود هستید؟</h4>
                     </div>
-                    <a href="{% url 'home:about' %}" class="order_btn">تماس بگیرید</a>
+                    <a href="{% url 'home:contact' %}" class="order_btn">تماس بگیرید</a>
                 </div>
             </div>
             <!-- column-wrapper -->
@@ -163,7 +131,8 @@
                         <div class="scroller"></div>
                     </div>
                 </div>
-                <a href="{% url 'portfo:blog' %}" class="bth_btn hbn_vis"><i class="fal fa-home-lg-alt"></i><strong>بازگشت به
+                <a href="{% url 'portfo:blog' %}" class="bth_btn hbn_vis"><i class="fal fa-home-lg-alt"></i><strong>بازگشت
+                    به
                     خانه</strong></a>
                 <div class="progress-bar-wrap">
                     <div class="progress-bar color-bg"></div>
