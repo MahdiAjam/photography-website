@@ -2,6 +2,9 @@
 
 This is my first Django project: a photography-themed website. The website allows users to showcase their resume, display photos with descriptions, write blog posts, and access contact and about sections. It is a simple and functional platform designed to highlight creative work and connect with others.
 
+### A demo of website
+https://github.com/user-attachments/assets/2ce2e671-a0b4-46c6-ac60-b8d4680c2576
+
 ## Features
 
 ### 1. **Photography Showcase**
