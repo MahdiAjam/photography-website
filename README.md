@@ -84,7 +84,8 @@ If you'd like to contribute:
    ```
 5. Open a pull request.
 
-## License
+## Contact
+For questions or support, contact **Mahdi Ajam** at **mahdiajam8754@gmail.com**.
 
 This project is open source and available under the [MIT License](LICENSE).
 
